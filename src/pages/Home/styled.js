@@ -72,16 +72,18 @@ export const BannerTexts = styled.div`
 `;
 
 export const BannerSubTitle = styled.h3`
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 500;
+    text-transform: uppercase;
     margin: 2rem 0 .3rem;
 `;
 
 export const BannerTitle = styled.h2`
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     text-transform: uppercase;
     margin: .3rem 0;
+    color: #b34c4c;
 `;
 
 export const BannerText = styled.p`
@@ -94,12 +96,19 @@ export const BannerButton = styled.button`
     display: inline;
     padding: 1rem 2rem;
     width: 200px;
-    background-color: #b34c4c;
+    background-color: #262525;
     border-radius: 4px;
     border: 1px solid;
-    border-color: #b34c4c;
+    border-color: #262525;
     color: #fff;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        background-color: #b34c4c;
+        border-color: #b34c4c;
+        box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    }
 `;
 
 export const BannerImage = styled.div`
@@ -166,7 +175,7 @@ export const Offers = styled.div`
 
 export const OffersItem = styled.div`
     border-radius: 4px;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     border: 1px solid;
     border-color: #f5f5f5;
     display: flex;
@@ -174,13 +183,19 @@ export const OffersItem = styled.div`
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    transition: all .2s ease-in-out;
     
     &:hover {
         box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         border-color: rgba(0,0,0,0.1);
 
         & img {
-            transform: scale(1.05);
+            transform: scale(1.15);
+        }
+
+        & button {
+            background-color: #b34c4c;
+            border-color: #b34c4c;
         }
     }
 `;
@@ -190,13 +205,17 @@ export const OffersItemImage = styled.img`
     height: auto;
     text-align: center;
     min-height: 220px;
+    transition: all .2s ease-in-out;
 `;
 
 export const OffersItemCategory = styled.p`
-    font-size: 0.8rem;
-    margin: 1rem 1rem 0 1rem;
-    font-weight: 300;
+    font-size: 0.7rem;
+    margin: 1.5rem 1rem 0 1rem;
+    font-weight: 700;
     color: #b34c4c;
+    text-transform: uppercase;
+    z-index: 2;
+    background-color: #fff;
 `;
 
 export const OffersItemTitle = styled.p`
@@ -231,11 +250,7 @@ export const OffersItemButton = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &:hover {
-        background-color: #b34c4c;
-        border-color: #b34c4c;
-    }
+    transition: all .2s ease-in-out;
 `;
 
 export const Footer = styled.footer`
