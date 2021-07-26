@@ -84,6 +84,10 @@ export const BannerTitle = styled.h2`
     text-transform: uppercase;
     margin: .3rem 0;
     color: #b34c4c;
+
+    @media screen and (max-width: 529px) {
+    font-size: 2rem;
+    }
 `;
 
 export const BannerText = styled.p`
@@ -206,6 +210,10 @@ export const OffersItemImage = styled.img`
     text-align: center;
     min-height: 220px;
     transition: all .2s ease-in-out;
+
+    @media screen and (max-width: 529px) {
+        width: 50%;
+    }
 `;
 
 export const OffersItemCategory = styled.p`

@@ -169,7 +169,35 @@ const products = [
     }
 ]
 
+const user = {
+    name: 'Ivan Rosa',
+    email: 'iivan.si@msn.com',
+    city: 'Cosmorama',
+    phone: '17996022603'
+}
+
 function App() {
+
+    function byItem(e) {
+        const position = e.target.getAttribute('data-position-product');
+
+        let newItem = {
+            dataUser: user,
+            purchaseItem: {
+                "id": products[position].id,
+                "title": products[position].title,
+                "price": products[position].price,
+                "description": products[position].description,
+                "category": products[position].category,
+                "image": products[position].image
+            }
+        }
+
+        console.log(newItem);
+
+        localStorage.setItem("purchaseN_" + products[position].id, JSON.stringify(newItem));
+    }
+
     return (
         <S.FullContainer>
             <S.Container>
@@ -179,7 +207,7 @@ function App() {
                         <S.NavigationItem>Item</S.NavigationItem>
                         <S.NavigationItem>Item</S.NavigationItem>
                         <S.NavigationItem>
-                            <ShoppingCart color="dark" />
+                            <ShoppingCart color="dark"></ShoppingCart>
                         </S.NavigationItem>
                     </S.Navigation>
                 </S.Navbar>
@@ -210,7 +238,7 @@ function App() {
             </S.OurOffers>
 
             <S.Offers>
-                {products.map((product) => {
+                {products.map((product, key) => {
                     return (
                         <S.OffersItem key={product.id}>
                             <S.OffersItemImage src={product.image} alt="imagem"></S.OffersItemImage>
@@ -218,9 +246,9 @@ function App() {
                             <S.OffersItemTitle>{product.title}</S.OffersItemTitle>
                             <S.OffersItemDescription>{(product.description).toString().substring(0, 130) + "..."}</S.OffersItemDescription>
                             <S.OffersItemPrice>R$ {parseFloat(product.price).toFixed(2)}</S.OffersItemPrice>
-                            <S.OffersItemButton>
+                            <S.OffersItemButton data-position-product={key} onClick={byItem}>
                                 Comprar
-                                <ShoppingCart color="dark" />
+                                <ShoppingCart color="dark" className="noEvents" />
                             </S.OffersItemButton>
                         </S.OffersItem>
                     );
