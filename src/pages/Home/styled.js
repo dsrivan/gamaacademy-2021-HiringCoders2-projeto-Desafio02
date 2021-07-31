@@ -186,6 +186,8 @@ export const OffersItem = styled.div`
     text-align: center;
     justify-content: space-between;
     transition: all .2s ease-in-out;
+    position: relative;
+    overflow: hidden;
     
     &:hover {
         box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -207,8 +209,10 @@ export const OffersItemImage = styled.img`
     height: auto;
     text-align: center;
     min-height: 220px;
+    position: relative;
+    overflow: hidden;
     transition: all .2s ease-in-out;
-
+    
     @media screen and (max-width: 529px) {
         width: 50%;
     }
@@ -222,7 +226,7 @@ export const OffersItemCategory = styled.p`
     text-transform: uppercase;
     z-index: 2;
     background-color: #fff;
-`;
+    `;
 
 export const OffersItemTitle = styled.p`
     font-size: 1rem;
@@ -230,11 +234,32 @@ export const OffersItemTitle = styled.p`
     font-weight: 700;
 `;
 
+export const OffersSeeDescription = styled.p`
+    font-size: 0.7rem;
+    cursor: pointer;
+
+    &:hover ~ .offersItemDescription {
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+    }
+`;
+
 export const OffersItemDescription = styled.p`
     font-size: 0.89rem;
-    margin: 1rem 1rem 0 1rem;
-    color: gray;
-    /* display: none; */
+    color: #ececec;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 345px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 24px;
+    padding: 1rem;
+    border-radius: 8px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: 3;
 `;
 
 export const OffersItemPrice = styled.p`
