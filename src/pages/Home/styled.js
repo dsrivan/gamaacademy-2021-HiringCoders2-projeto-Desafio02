@@ -72,45 +72,43 @@ export const BannerTexts = styled.div`
 `;
 
 export const BannerSubTitle = styled.h3`
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: .8rem;
+    font-weight: 700;
     text-transform: uppercase;
-    margin: 2rem 0 .3rem;
+    color: #b34c4c;
 `;
 
 export const BannerTitle = styled.h2`
     font-size: 3rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: .3rem 0;
-    color: #b34c4c;
+    font-weight: 900;
 
     @media screen and (max-width: 529px) {
-    font-size: 2rem;
+        font-size: 2rem;
     }
 `;
 
 export const BannerText = styled.p`
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 300;
-    margin: .5rem 0 2rem;
+    margin: 0 0 2rem 0;
+    color: gray;
 `;
 
 export const BannerButton = styled.button`
     display: inline;
     padding: 1rem 2rem;
     width: 200px;
-    background-color: #262525;
+    background-color: #b34c4c;
     border-radius: 4px;
     border: 1px solid;
-    border-color: #262525;
+    border-color: #b34c4c;
     color: #fff;
     cursor: pointer;
     transition: all .2s ease-in-out;
 
     &:hover {
-        background-color: #b34c4c;
-        border-color: #b34c4c;
+        background-color: #262525;
+        border-color: #262525;
         box-shadow: 5px 5px 10px rgba(0,0,0,.5);
     }
 `;
@@ -149,8 +147,8 @@ export const OurOffersTitle = styled.h2`
         position: absolute;
         width: 80px;
         height: 4px;
-        background-color: red;
-        top: -9px;
+        background-color: #b34c4c;
+        bottom: -9px;
         border-radius: 4px;
     }
 `;
@@ -236,6 +234,7 @@ export const OffersItemDescription = styled.p`
     font-size: 0.89rem;
     margin: 1rem 1rem 0 1rem;
     color: gray;
+    /* display: none; */
 `;
 
 export const OffersItemPrice = styled.p`
