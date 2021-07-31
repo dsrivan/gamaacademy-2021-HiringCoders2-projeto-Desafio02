@@ -193,7 +193,7 @@ function App() {
             }
         }
 
-        console.log(newItem);
+        // console.log(newItem);
 
         localStorage.setItem("purchaseN_" + products[position].id, JSON.stringify(newItem));
     }
@@ -204,8 +204,8 @@ function App() {
                 <S.Logo>eStore</S.Logo>
                 <S.Navbar>
                     <S.Navigation>
-                        <S.NavigationItem>Item</S.NavigationItem>
-                        <S.NavigationItem>Item</S.NavigationItem>
+                        <S.NavigationItem>Link</S.NavigationItem>
+                        <S.NavigationItem>Link</S.NavigationItem>
                         <S.NavigationItem>
                             <ShoppingCart color="dark"></ShoppingCart>
                         </S.NavigationItem>
@@ -216,8 +216,8 @@ function App() {
             <S.Banner>
                 <S.BannerTextsImage>
                     <S.BannerTexts>
-                        <S.BannerSubTitle>Any subtitle</S.BannerSubTitle>
-                        <S.BannerTitle>Product Title</S.BannerTitle>
+                        <S.BannerSubTitle>Algum subtítulo</S.BannerSubTitle>
+                        <S.BannerTitle>Título do banner</S.BannerTitle>
                         <S.BannerText>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi necessitatibus pariatur...
                         </S.BannerText>
@@ -233,7 +233,7 @@ function App() {
 
             <S.OurOffers>
                 <S.OurOffersTitle>
-                    Our Offers
+                    Nossas ofertas
                 </S.OurOffersTitle>
             </S.OurOffers>
 
