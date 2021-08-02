@@ -242,12 +242,22 @@ function App() {
                     return (
                         <S.OffersItem key={product.id}>
                             <S.OffersItemImage src={product.image} alt="imagem"></S.OffersItemImage>
-                            <S.OffersItemCategory>{product.category}</S.OffersItemCategory>
-                            <S.OffersItemTitle>{product.title}</S.OffersItemTitle>
-                            <S.OffersSeeDescription>Ver descrição</S.OffersSeeDescription>
+                            <S.OffersItemCategory>
+                                {product.category}
+                            </S.OffersItemCategory>
+                            <S.OffersItemTitle>
+                                {product.title}
+                            </S.OffersItemTitle>
+                            <S.OffersSeeDescription>
+                                Ver descrição
+                            </S.OffersSeeDescription>
                             {/* <S.OffersItemDescription className="offersItemDescription">{(product.description).toString().substring(0, 130) + "..."}</S.OffersItemDescription> */}
-                            <S.OffersItemDescription className="offersItemDescription">{(product.description).toString()}</S.OffersItemDescription>
-                            <S.OffersItemPrice>R$ {parseFloat(product.price).toFixed(2)}</S.OffersItemPrice>
+                            <S.OffersItemDescription className="offersItemDescription">
+                                {(product.description).toString()}
+                            </S.OffersItemDescription>
+                            <S.OffersItemPrice>
+                                R$ {parseFloat(product.price).toFixed(2)}
+                            </S.OffersItemPrice>
                             <S.OffersItemButton data-position-product={key} onClick={byItem}>
                                 Comprar
                                 <ShoppingCart color="dark" className="noEvents" />
