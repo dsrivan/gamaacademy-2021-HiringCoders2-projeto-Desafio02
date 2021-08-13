@@ -208,7 +208,7 @@ export const OffersItemImage = styled.img`
     width: 80%;
     height: auto;
     text-align: center;
-    min-height: 220px;
+    min-height: 160px;
     position: relative;
     overflow: hidden;
     transition: all .2s ease-in-out;
@@ -249,7 +249,7 @@ export const OffersItemDescription = styled.p`
     color: #ececec;
     background-color: rgba(0,0,0,0.7);
     position: absolute;
-    height: 345px;
+    /* height: 345px; */
     display: flex;
     justify-content: center;
     align-items: center;
