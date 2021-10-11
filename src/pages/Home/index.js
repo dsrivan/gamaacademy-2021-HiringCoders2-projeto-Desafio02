@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import * as S from './styled';
-
-import { useHistory } from 'react-router-dom';
 
 import { ShoppingCart } from '@material-ui/icons';
 
